@@ -58,8 +58,9 @@ export default {
   data: () => ({
     drawer: false,
     items: [
-      { title: 'Home', icon: 'mdi-image', to: '/' },
+      { title: 'Notice', icon: 'mdi-image', to: '/' },
       { title: 'Grid', icon: 'mdi-view-dashboard', to: '/grid' },
+      { title: 'Home', icon: 'mdi-view-dashboard', to: '/home' },
     ],
     right: null,
 

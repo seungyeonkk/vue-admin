@@ -3,6 +3,7 @@ package com.example.vueadmin.api.notice.service;
 import com.example.vueadmin.api.notice.domain.entity.Board;
 import com.example.vueadmin.api.notice.repository.BoardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -25,7 +26,7 @@ public class BoardService {
     }
 
     public List<Board> findAll() {
-       return borderRepository.findAll();
+       return borderRepository.findAll(Sort.by(Sort.Direction.DESC, "id"));
     }
 
     public Optional<Board> findById( Integer id ) {
