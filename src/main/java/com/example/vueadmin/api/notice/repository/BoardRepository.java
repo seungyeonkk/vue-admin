@@ -19,4 +19,7 @@ public interface BoardRepository extends JpaRepository<Board, Integer>, BoardMap
 
     @Override
     List<Board> findAll();
+
+    @Override
+    void deleteById(Integer id);
 }

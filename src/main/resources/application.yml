@@ -5,7 +5,7 @@ spring:
       static-locations: classpath:/static/vue/
   # h2 db 설정
   datasource:
-    url: jdbc:h2:tcp://localhost/~/test;MODE=LEGACY
+    url: jdbc:h2:tcp://localhost/~/admin
     username: sa
     password:
     driver-class-name: org.h2.Driver

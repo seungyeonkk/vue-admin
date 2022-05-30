@@ -35,14 +35,18 @@ public class BoardService {
 
     public void modify ( Board param ) {
 
-        Optional<Board> findedBoard = borderRepository.findById( param.getId() );
+        Optional<Board> foundBoard = borderRepository.findById( param.getId() );
 
-        findedBoard.ifPresent( board -> {
+        foundBoard.ifPresent( board -> {
             board.setTitle( param.getTitle() );
             board.setContent( param.getContent() );
         });
 
         borderRepository.save( param );
+    }
+
+    public void delete( Integer id ) {
+        borderRepository.deleteById( id );
     }
 
 }

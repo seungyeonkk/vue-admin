@@ -29,6 +29,7 @@
             dark
             v-bind="attrs"
             v-on="on"
+            @click="clearForm"
           >
             등록
           </v-btn>
@@ -122,6 +123,10 @@ export default {
     showDetail( notice ) {
       console.log('상세로 이동', notice.id);
       this.$router.push(`/detail/${notice.id}`);
+    },
+    clearForm() {
+      this.notice.title = "";
+      this.notice.content = "";
     }
   },
 

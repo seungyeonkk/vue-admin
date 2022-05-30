@@ -25,7 +25,7 @@ public class BoardController {
     }
 
     @GetMapping("/notice/{id}")
-    public APIResponse findById( @PathVariable Integer id) {
+    public APIResponse findById( @PathVariable Integer id ) {
         return APIResponse.success( boardService.findById( id ) );
     }
 
@@ -40,6 +40,13 @@ public class BoardController {
     public APIResponse save( @RequestBody Board board ) {
 
         boardService.save( board );
+        return APIResponse.success();
+    }
+
+    @DeleteMapping("/notice/{id}")
+    public APIResponse delete( @PathVariable Integer id ) {
+
+        boardService.delete( id );
         return APIResponse.success();
     }
 }
